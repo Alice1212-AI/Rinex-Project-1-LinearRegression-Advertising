@@ -30,7 +30,7 @@ NumPy: For numerical operations like calculating RMSE.
 
 # Steps in the Script
 
-✔ Loading Data:
+1.Loading Data:
 
 python
 
@@ -40,7 +40,7 @@ data = pd.read_csv("Advertising.csv", index_col=0)
 
 The dataset Advertising.csv is loaded into a pandas DataFrame. The first column (index) is set as the index column.
 
-✔ Data Exploration:
+2.Data Exploration:
 
 python
 
@@ -56,7 +56,7 @@ head() and tail() display the first and last five rows of the dataset, respectiv
 
 shape outputs the number of rows and columns in the dataset.
 
-✔ Visualization:
+3.Visualization:
 
 python
 
@@ -66,7 +66,7 @@ sns.pairplot(data, x_vars=['TV', 'Radio', 'Newspaper'], y_vars='Sales', height=7
 
 A pairplot is created to visualize the relationship between the independent variables (TV, Radio, Newspaper) and the dependent variable (Sales). The kind='reg' argument adds regression lines to each scatter plot.
 
-✔ Preparing Features and Target Variables:
+4.Preparing Features and Target Variables:
 
 python
 
@@ -82,7 +82,7 @@ The independent variables (features) are selected as TV, Radio, and Newspaper.
 
 The dependent variable (Sales) is set as y.
 
-✔ Train-Test Split:
+5.Train-Test Split:
 
 python
 
@@ -92,7 +92,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=1)
 
 The data is split into training and testing sets (75% training, 25% testing) using train_test_split from sklearn.model_selection.
 
-✔ Training the Linear Regression Model:
+6.Training the Linear Regression Model:
 
 python
 
@@ -104,7 +104,7 @@ linreg.fit(X_train, y_train)
 
 A linear regression model is created and fitted to the training data.
 
-✔ Model Coefficients:
+7.Model Coefficients:
 
 python
 
@@ -116,7 +116,7 @@ print(linreg.coef_)
 
 The intercept and coefficients (weights for each feature) of the trained linear regression model are printed.
 
-✔ Model Prediction:
+8.Model Prediction:
 
 python
 
@@ -128,7 +128,7 @@ The trained model is used to make predictions on the test data.
 
 Evaluation: The script computes different error metrics:
 
-✔ Mean Absolute Error (MAE):
+9.Mean Absolute Error (MAE):
 
 python
 
@@ -138,7 +138,7 @@ print(metrics.mean_absolute_error(true, pred))
 
 MAE represents the average of absolute differences between predicted and actual values.
 
-✔ Mean Squared Error (MSE):
+10.Mean Squared Error (MSE):
 
 python
 
@@ -148,7 +148,7 @@ print(metrics.mean_squared_error(true, pred))
 
 MSE measures the average squared difference between predicted and actual values.
 
-✔ Root Mean Squared Error (RMSE):
+11.Root Mean Squared Error (RMSE):
 
 python
 
@@ -160,7 +160,7 @@ print(np.sqrt(metrics.mean_squared_error(y_test, y_pred)))
 
 RMSE gives the square root of MSE and is a commonly used evaluation metric to measure the magnitude of error.
 
-✔ Model Refit with Subset of Features:
+12.Model Refit with Subset of Features:
 
 python
 
