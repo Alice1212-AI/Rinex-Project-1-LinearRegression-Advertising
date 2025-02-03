@@ -203,8 +203,8 @@ Copy
 
 pip install pandas seaborn matplotlib scikit-learn numpy
 
-Notes
+# Notes
 
-✔ The dataset file Advertising.csv must be in the same directory as the script or provide the full path to the file.
+The dataset file Advertising.csv must be in the same directory as the script or provide the full path to the file.
 
 
